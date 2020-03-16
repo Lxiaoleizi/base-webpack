@@ -6,18 +6,16 @@ const glob = require('glob-all')
 const PurifyCSS = require('purifycss-webpack')
 // 压缩css
 const OptimizeCssPlugin = require('optimize-css-assets-webpack-plugin')
-// 每次打包清理构建目录
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
-module.exports = merge(baseConfig, {
+const SpeedMeasurePlugin = require('speed-measure-webpack-plugin')
+const smp = new SpeedMeasurePlugin()
+
+const config = merge(baseConfig, {
   mode: 'production',
 
   devtool: 'source-map',
 
   plugins: [
-    new CleanWebpackPlugin({
-      // cleanOnceBeforeBuildPatterns: ['**/*', '!dll', '!dll/**']
-    }),
     // 清除无用 css---生产环境---csstree-shaking
     new PurifyCSS({
       paths: glob.sync([
@@ -30,3 +28,5 @@ module.exports = merge(baseConfig, {
     new OptimizeCssPlugin()
   ]
 })
+
+module.exports = smp.wrap(config)

@@ -7,7 +7,7 @@ const MockerApi = require('mocker-api')
 module.exports = merge(baseConfig, {
   mode: 'development',
 
-  devtool: 'cheap - module - eval - source - map',
+  devtool: 'cheap-module-eval-source-map',
 
   devServer: {
     port: '3000', //默认是8080,
