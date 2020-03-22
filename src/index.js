@@ -1,7 +1,15 @@
-import App from './app'
+import App from './App'
+import 'normalize.css/normalize.css'
+
+
+
 
 const render = Component => {
-  ReactDOM.render(<Component />, document.getElementById('root'))
+  ReactDOM.render(
+    // <Provider store={store}>
+      <Component />,
+    // {/* </Provider>, */}
+    document.getElementById('root'))
 }
 
 render(App)

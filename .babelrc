@@ -7,7 +7,7 @@
                 "corejs": 3
             }
         ],
-        "@babel/plugin-syntax-dynamic-import",// 支持import写法
+        "@babel/plugin-syntax-dynamic-import"// 支持import写法
         // "@babel/plugin-transform-react-jsx" // 转换react
     ]
 }

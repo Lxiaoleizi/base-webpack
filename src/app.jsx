@@ -1,11 +1,9 @@
-import Home from './views/Home/Home'
 
+import "./App.less"
 
 const App = function() {
     return (
-        <div>
-            <Home/>
-        </div>
+        <div>app</div>
     )
 }
 
