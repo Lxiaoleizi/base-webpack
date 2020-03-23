@@ -30,6 +30,18 @@ module.exports = {
 
   ],
   rules: {
-    "react-hooks/rules-of-hooks": "error"
+    "react-hooks/rules-of-hooks": "error",
+    "linebreak-style": [0 ,"error", "windows"],
+
+    // 语序在js文件中引入jsx
+    "react/jsx-filename-extension": [
+      1,
+      {
+          "extensions": [
+              ".js",
+              ".jsx"
+          ]
+      }
+  ],
   },
 };

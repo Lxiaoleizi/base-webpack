@@ -1,10 +1,7 @@
 
-import "./App.less"
+import './App.less';
 
-const App = function() {
-    return (
-        <div>app</div>
-    )
-}
-
-export default App
+const App = () => (
+  <div>app</div>
+);
+export default App;
