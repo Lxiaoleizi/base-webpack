@@ -31,7 +31,7 @@ const config = merge(baseConfig, {
     minimizer: [
       new TerserWebpackPlugin({
           parallel: true,
-          exclude:path.resolve(__dirname,'../','/node_modules'),
+          exclude:path.resolve(__dirname, '../', 'node_modules'),
           include: path.join(__dirname, '../src'),
           cache: true,
       }),
